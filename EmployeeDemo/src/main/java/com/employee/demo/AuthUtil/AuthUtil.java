@@ -32,13 +32,13 @@ public class AuthUtil {
 	/**
 	 * Field name for JWT secret key.
 	 */
-	@Value("${bezkoder.app.jwtSecret}")
+	@Value("${manoj.app.jwtSecret}")
 	private String jwtSecret;
 
 	/**
 	 * Field name JWT expire time in millisecond.
 	 */
-	@Value("${bezkoder.app.jwtExpirationMs}")
+	@Value("${manoj.app.jwtExpirationMs}")
 	private int jwtExpirationMs;
 
 	/**

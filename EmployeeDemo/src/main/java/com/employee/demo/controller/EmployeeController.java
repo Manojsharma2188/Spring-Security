@@ -92,9 +92,14 @@ public class EmployeeController {
 	 */
 	@PutMapping("/employees/{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable("id") long id, @RequestBody Employee employee) {
+         System.out.println("ID vALUE FOR UPDATE " + id);
+         System.out.println("ID vALUE in employee FOR UPDATE " + employee.getId());
+         System.out.println("ID vALUE in employee FOR UPDATE " + employee.getName());
+         System.out.println("ID vALUE in employee FOR UPDATE " + employee.getAge());
+
 
 		Optional<Employee> _employeeData = employeeService.updateEmployee(id);
-
+        employee.setId(id);
 		if (_employeeData.isPresent()) {
 			Employee _employee = _employeeData.get();
 			_employee.setName(employee.getName());
